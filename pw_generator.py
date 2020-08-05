@@ -1,8 +1,8 @@
 import random
 import string
-from password_strength import PasswordPolicy
 
 def password(pw_length):
+        #to get all the characters we can use in password
         char1 = string.ascii_lowercase
         char2 = string.ascii_uppercase
         char3 = string.digits
@@ -10,11 +10,11 @@ def password(pw_length):
 
 
         pw = list()
-        pw.extend(list(char1))
+        pw.extend(list(char1)) #to add all the available characters in a list
         pw.extend(list(char2))
         pw.extend(list(char3))
         pw.extend(list(char4))
-        random.shuffle(pw)
+        random.shuffle(pw) #randomly shuffles the list to get random character selection
         print("We have successfully generated your password.\nYour password is : ")
         print("".join(pw[0:pw_length]))
 
